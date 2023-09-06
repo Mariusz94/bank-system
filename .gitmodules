@@ -1,0 +1,21 @@
+[submodule "bs-authentication-ms"]
+	path = bs-authentication-ms
+	url = git@github.com:Mariusz94/bs-authentication-ms.git
+[submodule "bs-withdrawl-ms"]
+	path = bs-withdrawl-ms
+	url = git@github.com:Mariusz94/bs-withdrawl-ms.git
+[submodule "bs-deposit-ms"]
+	path = bs-deposit-ms
+	url = git@github.com:Mariusz94/bs-deposit-ms.git
+[submodule "bs-transfer-ms"]
+	path = bs-transfer-ms
+	url = git@github.com:Mariusz94/bs-transfer-ms.git
+[submodule "bs-database-db"]
+	path = bs-database-db
+	url = git@github.com:Mariusz94/bs-database-db.git
+[submodule "bs-db_connector-ms"]
+	path = bs-db_connector-ms
+	url = git@github.com:Mariusz94/bs-db_connector-ms.git
+[submodule "bs-task_broker-bm"]
+	path = bs-task_broker-bm
+	url = git@github.com:Mariusz94/bs-task_broker-bm.git
