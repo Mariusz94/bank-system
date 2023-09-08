@@ -14,3 +14,6 @@ notes:
 
 update:
 	git submodule update --init
+
+test:
+	echo test
