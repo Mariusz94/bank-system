@@ -19,3 +19,6 @@
 [submodule "bs-task_broker-bm"]
 	path = bs-task_broker-bm
 	url = git@github.com:Mariusz94/bs-task_broker-bm.git
+[submodule "bs-rest_api-ms"]
+	path = bs-rest_api-ms
+	url = git@github.com:Mariusz94/bs-rest_api-ms.git
