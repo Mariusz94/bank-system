@@ -39,5 +39,5 @@ gen_struct:
 	git clone --branch main https://github.com/Mariusz94/structure_project_generator.git
 	cp ./structure_project_generator/python/create.sh ./bs-authentication-ms/create.sh
 	make rm DIR=structure_project_generator
-	bash ./bs-authentication-ms/create.sh
+	cd ./bs-authentication-ms && bash ./create.sh
 	make rm DIR=./bs-authentication-ms/create.sh
