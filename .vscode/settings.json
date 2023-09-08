@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "bs-rest_api-ms"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

@@ -15,5 +15,29 @@ notes:
 update:
 	git submodule update --init
 
+install_venv:
+#python3.8 -m venv venv
+	./venv/bin/pip3 install -r ./bs-rest_api-ms/app/requirements.txt
+	./venv/bin/pip3 install pip install -U sphinx==7.1.2
+	./venv/bin/pip3 install pip install sphinx-rtd-theme==1.3.0
+	./venv/bin/pip3 install pip install pytest==7.4.2
+	./venv/bin/pip3 list
+
 test:
-	echo test
+	./venv/bin/pytest -vv ./bs-rest_api-ms/tests/functional_tests/test.py
+
+# make rm DIR=ec-files-proto
+rm:
+ifeq ($(OS), Windows_NT)
+	rmdir /s /q $(DIR)
+else
+	rm -rf $(DIR)
+endif
+
+
+gen_struct:
+	git clone --branch main https://github.com/Mariusz94/structure_project_generator.git
+	cp ./structure_project_generator/python/create.sh ./bs-authentication-ms/create.sh
+	make rm DIR=structure_project_generator
+	bash ./bs-authentication-ms/create.sh
+	make rm DIR=./bs-authentication-ms/create.sh
