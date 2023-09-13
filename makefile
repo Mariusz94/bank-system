@@ -16,7 +16,7 @@ update:
 	git submodule update --init
 
 install_venv:
-#python3.8 -m venv venv
+	python3.8 -m venv venv
 	./venv/bin/pip3 install -r ./bs-rest_api-ms/app/requirements.txt
 	./venv/bin/pip3 install pip install -U sphinx==7.1.2
 	./venv/bin/pip3 install pip install sphinx-rtd-theme==1.3.0
@@ -35,9 +35,8 @@ else
 endif
 
 
-gen_struct:
+# Generate microservice structure
+gen_ms:
 	git clone --branch main https://github.com/Mariusz94/structure_project_generator.git
-	cp ./structure_project_generator/python/create.sh ./bs-authentication-ms/create.sh
+	cp -a ./structure_project_generator/python/microservice/. ./bs-db_connector-ms/.
 	make rm DIR=structure_project_generator
-	cd ./bs-authentication-ms && bash ./create.sh
-	make rm DIR=./bs-authentication-ms/create.sh
