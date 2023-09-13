@@ -11,6 +11,7 @@ notes:
 	git submodule add --force git@github.com:Mariusz94/bs-db_connector-ms.git
 	git submodule add --force git@github.com:Mariusz94/bs-task_broker-bm.git
 	git submodule add --force git@github.com:Mariusz94/bs-rest_api-ms.git
+	git submodule add --force git@github.com:Mariusz94/bs-files-proto.git
 
 update:
 	git submodule update --init

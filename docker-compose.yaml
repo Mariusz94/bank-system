@@ -1,0 +1,32 @@
+version: "2.4"
+
+services:
+  bs-database-db:
+    container_name: bs-database-db
+    build:
+      context: bs-database-db
+      dockerfile: docker/Dockerfile
+    restart: always
+    ports:
+      - "6666:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+    networks:
+      - bank_system
+
+  bs-db_connector-ms:
+    container_name: bs-db_connector-ms
+    build:
+      context: bs-db_connector-ms
+      dockerfile: docker/Dockerfile
+    restart: always
+    ports:
+      - "91:80"
+    environment:
+      - BS_DATABASE_IP=bs-database-db
+      - BS_DATABASE_PORT=5432
+      - BS_DATABASE_USERNAME=postgres
+      - BS_DATABASE_PASSWORD=password
+      - BS_DATABASE_NAME=postgres
+    networks:
+      - bank_system

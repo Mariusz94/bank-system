@@ -22,3 +22,6 @@
 [submodule "bs-rest_api-ms"]
 	path = bs-rest_api-ms
 	url = git@github.com:Mariusz94/bs-rest_api-ms.git
+[submodule "bs-files-proto"]
+	path = bs-files-proto
+	url = git@github.com:Mariusz94/bs-files-proto.git
