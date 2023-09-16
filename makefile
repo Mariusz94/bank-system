@@ -18,8 +18,8 @@ update:
 
 run:
 	docker-compose down
-	docker-compose up -d --build bs-database-db
-# docker logs -f bs-database-db
+	docker-compose up -d --build bs-database-db bs-db_connector-ms
+	docker logs -f bs-db_connector-ms
 
 install_venv:
 	python3.8 -m venv venv
