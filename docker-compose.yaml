@@ -30,3 +30,8 @@ services:
       - BS_DATABASE_NAME=postgres
     networks:
       - bank_system
+
+networks:
+  bank_system:
+    name: bank_system
+    external: false

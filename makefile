@@ -16,6 +16,11 @@ notes:
 update:
 	git submodule update --init
 
+run:
+	docker-compose down
+	docker-compose up -d --build bs-database-db bs-db_connector-ms
+	docker logs -f bs-db_connector-ms
+
 install_venv:
 	python3.8 -m venv venv
 	./venv/bin/pip3 install -r ./bs-rest_api-ms/app/requirements.txt
