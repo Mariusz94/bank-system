@@ -39,5 +39,5 @@ endif
 # Generate microservice structure
 gen_ms:
 	git clone --branch main https://github.com/Mariusz94/structure_project_generator.git
-	cp -a ./structure_project_generator/python/microservice/. ./bs-db_connector-ms/.
+	cp -a ./structure_project_generator/python/microservice/. ./bs-authentication-ms/.
 	make rm DIR=structure_project_generator
