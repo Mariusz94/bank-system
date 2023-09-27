@@ -45,6 +45,20 @@ services:
     networks:
       - bank_system
 
+  bs-rest_api-ms:
+    container_name: bs-rest_api-ms
+    build:
+      context: bs-rest_api-ms
+      dockerfile: docker/Dockerfile
+    restart: always
+    ports:
+      - "5555:5555"
+    environment:
+      - BS_DB_CONNECTOR_MS_IP=bs-db_connector-ms
+      - BS_DB_CONNECTOR_MS_PORT=80
+    networks:
+      - bank_system
+
 networks:
   bank_system:
     name: bank_system
